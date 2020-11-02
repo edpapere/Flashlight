@@ -98,15 +98,18 @@ class ViewController: UIViewController {
                 currentColor = 1 // isLightOn = true
             }
             
-            // Calculate adjustment change and apply to current luminosity
+            // Calculate adjustment change and apply to current luminosity:
+            //  - swipe up increases lummonicity
+            //  - swipe down decreases luminocity
             let change = touch!.previousLocation(in: nil).y - touch!.location(in: nil).y
             currentLuminosity += ( change/adjustmentScale )
             
             // let luminosity to stay in interval [minimumLuminosity...1] and
-            // switch light off if luminosity was adjusted to lower than minimum
+            // switch light off if luminosity had been adjusted to lower than minimum
+            // (additionaly set luminosity to maximum in order to reset everything to initial state)
             currentLuminosity = currentLuminosity > 1.0 ? 1.0 : currentLuminosity
             if currentLuminosity < minimumLuminosity {
-                currentLuminosity = minimumLuminosity
+                currentLuminosity = 1.0
                 currentColor = 0 // isLightOn = false
             }
             
