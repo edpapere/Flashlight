@@ -13,6 +13,16 @@
 		554DB016254FDC05001219ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554DB014254FDC05001219ED /* Main.storyboard */; };
 		554DB018254FDC07001219ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554DB017254FDC07001219ED /* Assets.xcassets */; };
 		554DB01B254FDC07001219ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554DB019254FDC07001219ED /* LaunchScreen.storyboard */; };
+		555958112550B61F00F1382C /* Flashlight_09.png in Resources */ = {isa = PBXBuildFile; fileRef = 555958072550B61E00F1382C /* Flashlight_09.png */; };
+		555958122550B61F00F1382C /* Flashlight_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 555958082550B61E00F1382C /* Flashlight_07.png */; };
+		555958132550B61F00F1382C /* Flashlight_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 555958092550B61E00F1382C /* Flashlight_02.png */; };
+		555958142550B61F00F1382C /* Flashlight_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 5559580A2550B61E00F1382C /* Flashlight_05.png */; };
+		555958152550B61F00F1382C /* Flashlight_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 5559580B2550B61E00F1382C /* Flashlight_06.png */; };
+		555958162550B61F00F1382C /* Flashlight_08.png in Resources */ = {isa = PBXBuildFile; fileRef = 5559580C2550B61E00F1382C /* Flashlight_08.png */; };
+		555958172550B61F00F1382C /* Flashlight_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 5559580D2550B61E00F1382C /* Flashlight_04.png */; };
+		555958182550B61F00F1382C /* Flashlight_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 5559580E2550B61F00F1382C /* Flashlight_10.png */; };
+		555958192550B61F00F1382C /* Flashlight_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 5559580F2550B61F00F1382C /* Flashlight_03.png */; };
+		5559581A2550B61F00F1382C /* Flashlight_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 555958102550B61F00F1382C /* Flashlight_01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		554DB017254FDC07001219ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		554DB01A254FDC07001219ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		554DB01C254FDC07001219ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		555958072550B61E00F1382C /* Flashlight_09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_09.png; sourceTree = "<group>"; };
+		555958082550B61E00F1382C /* Flashlight_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_07.png; sourceTree = "<group>"; };
+		555958092550B61E00F1382C /* Flashlight_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_02.png; sourceTree = "<group>"; };
+		5559580A2550B61E00F1382C /* Flashlight_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_05.png; sourceTree = "<group>"; };
+		5559580B2550B61E00F1382C /* Flashlight_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_06.png; sourceTree = "<group>"; };
+		5559580C2550B61E00F1382C /* Flashlight_08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_08.png; sourceTree = "<group>"; };
+		5559580D2550B61E00F1382C /* Flashlight_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_04.png; sourceTree = "<group>"; };
+		5559580E2550B61F00F1382C /* Flashlight_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_10.png; sourceTree = "<group>"; };
+		5559580F2550B61F00F1382C /* Flashlight_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_03.png; sourceTree = "<group>"; };
+		555958102550B61F00F1382C /* Flashlight_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flashlight_01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 		554DB00D254FDC05001219ED /* Flashlight */ = {
 			isa = PBXGroup;
 			children = (
+				5559581C2550B63600F1382C /* Screenshots */,
 				554DB00E254FDC05001219ED /* AppDelegate.swift */,
 				554DB010254FDC05001219ED /* SceneDelegate.swift */,
 				554DB012254FDC05001219ED /* ViewController.swift */,
@@ -65,6 +86,23 @@
 				554DB01C254FDC07001219ED /* Info.plist */,
 			);
 			path = Flashlight;
+			sourceTree = "<group>";
+		};
+		5559581C2550B63600F1382C /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				555958102550B61F00F1382C /* Flashlight_01.png */,
+				555958092550B61E00F1382C /* Flashlight_02.png */,
+				5559580F2550B61F00F1382C /* Flashlight_03.png */,
+				5559580D2550B61E00F1382C /* Flashlight_04.png */,
+				5559580A2550B61E00F1382C /* Flashlight_05.png */,
+				5559580B2550B61E00F1382C /* Flashlight_06.png */,
+				555958082550B61E00F1382C /* Flashlight_07.png */,
+				5559580C2550B61E00F1382C /* Flashlight_08.png */,
+				555958072550B61E00F1382C /* Flashlight_09.png */,
+				5559580E2550B61F00F1382C /* Flashlight_10.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +162,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5559581A2550B61F00F1382C /* Flashlight_01.png in Resources */,
 				554DB01B254FDC07001219ED /* LaunchScreen.storyboard in Resources */,
 				554DB018254FDC07001219ED /* Assets.xcassets in Resources */,
+				555958162550B61F00F1382C /* Flashlight_08.png in Resources */,
+				555958112550B61F00F1382C /* Flashlight_09.png in Resources */,
+				555958122550B61F00F1382C /* Flashlight_07.png in Resources */,
 				554DB016254FDC05001219ED /* Main.storyboard in Resources */,
+				555958132550B61F00F1382C /* Flashlight_02.png in Resources */,
+				555958142550B61F00F1382C /* Flashlight_05.png in Resources */,
+				555958192550B61F00F1382C /* Flashlight_03.png in Resources */,
+				555958182550B61F00F1382C /* Flashlight_10.png in Resources */,
+				555958152550B61F00F1382C /* Flashlight_06.png in Resources */,
+				555958172550B61F00F1382C /* Flashlight_04.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
