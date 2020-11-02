@@ -10,7 +10,9 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    var isLightOn = false
+    var currentColor = 0 // 0 - off, 1 - white, 2 - red, 3 - yellow, 4 - green
+    var isLightOn: Bool { currentColor > 0 } // var isLightOn = false
+    
     override var prefersStatusBarHidden: Bool {
         true
     }
@@ -20,7 +22,16 @@ class ViewController: UIViewController {
     var isAdjustmentMode = false
 
     var lightColor: UIColor {
-        UIColor(red: currentLuminosity, green: currentLuminosity, blue: currentLuminosity, alpha: 1)
+        switch currentColor {
+        case 2:
+            return UIColor(red: currentLuminosity, green: 0, blue: 0, alpha: 1)
+        case 3:
+            return UIColor(red: currentLuminosity, green: currentLuminosity, blue: 0, alpha: 1)
+        case 4:
+            return UIColor(red: 0, green: currentLuminosity, blue: 0, alpha: 1)
+        default:
+            return UIColor(red: currentLuminosity, green: currentLuminosity, blue: currentLuminosity, alpha: 1)
+        }
     }
     
     var adjustmentScale: CGFloat {
@@ -66,7 +77,7 @@ class ViewController: UIViewController {
         if isAdjustmentMode {
             isAdjustmentMode = false
         } else {
-            isLightOn.toggle()
+            currentColor = (currentColor + 1) % 5 // isLightOn.toggle()
         }
 
         updateUI()
@@ -84,7 +95,7 @@ class ViewController: UIViewController {
             // if light is off then switch it on at minimal luminosity
             if !isLightOn {
                 currentLuminosity = minimumLuminosity
-                isLightOn = true
+                currentColor = 1 // isLightOn = true
             }
             
             // Calculate adjustment change and apply to current luminosity
@@ -96,7 +107,7 @@ class ViewController: UIViewController {
             currentLuminosity = currentLuminosity > 1.0 ? 1.0 : currentLuminosity
             if currentLuminosity < minimumLuminosity {
                 currentLuminosity = minimumLuminosity
-                isLightOn = false
+                currentColor = 0 // isLightOn = false
             }
             
             updateUI()
