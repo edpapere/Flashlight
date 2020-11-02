@@ -11,6 +11,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     var isLightOn = false
+    override var prefersStatusBarHidden: Bool {
+        true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
