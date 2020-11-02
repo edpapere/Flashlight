@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
         self.view.frame.height / 2
     }
 
-    // MARK: - METHODS
+    // MARK: - METHODS -
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,29 @@ class ViewController: UIViewController {
         //print( #line, #function, adjustmentScale)
     }
 
+    fileprivate func updateTorch() {
+        guard
+            let device = AVCaptureDevice.default(for: AVMediaType.video),
+            device.hasTorch
+        else { return }
+        
+        do {
+            try device.lockForConfiguration()
+            if isLightOn {
+                try device.setTorchModeOn(level: Float(currentLuminosity) )
+            } else {
+                device.torchMode = .off
+            }
+            device.unlockForConfiguration()
+        } catch {
+            print("Torch could not be used")
+        }
+        
+    }
+    
     fileprivate func updateUI() {
         self.view.backgroundColor = isLightOn ? lightColor : .black
+        updateTorch()
     }
         
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
