@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var button: UIButton!
     var isLightOn = false
     override var prefersStatusBarHidden: Bool {
         true
@@ -17,15 +16,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         updateUI()
     }
 
     fileprivate func updateUI() {
         self.view.backgroundColor = isLightOn ? .white : .black
     }
-    
-    @IBAction func buttonPressed() {
+        
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         isLightOn.toggle()
         updateUI()
     }
