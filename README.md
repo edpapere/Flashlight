@@ -1,7 +1,7 @@
 # Flashlight
 _1-st project from __iOS Development with Swift__ training course at Moscow Digital Academy_
 
-
+![](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Assets.xcassets/AppIcon.appiconset/48.png?raw=true)  
 This is a simple app that makes lit both the screen and the flashlight (if it is availble on a device).
 
 ### Basic functions
@@ -24,3 +24,4 @@ Developed with Xcode 12 for iOS 13.4 and higher
 ![Screenshot 04](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Screenshots/Flashlight_04.png?raw=true)
 ![Screenshot 05](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Screenshots/Flashlight_05.png?raw=true)
 ![Screenshot 06](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Screenshots/Flashlight_06.png?raw=true)
+ 
