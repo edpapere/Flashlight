@@ -12,3 +12,15 @@ This is a simple app that makes lit both the screen and the flashlight (if it is
      - swipe up increases luminocity even from the __off__ state
      - swipe down decreases luminocity down to the __off__ state
 
+### Build & Installation
+
+Developed with Xcode 12 for iOS 13.4 and higher
+
+### Screenshots
+
+![Screenshot 01](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Screenshots/Flashlight_01.png?raw=true)
+![Screenshot 02](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Screenshots/Flashlight_02.png?raw=true)
+![Screenshot 03](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Screenshots/Flashlight_03.png?raw=true)
+![Screenshot 04](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Screenshots/Flashlight_04.png?raw=true)
+![Screenshot 05](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Screenshots/Flashlight_05.png?raw=true)
+![Screenshot 06](https://github.com/edpapere/Flashlight/blob/main/Flashlight/Screenshots/Flashlight_06.png?raw=true)
