@@ -9,7 +9,9 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - Properties -
+    
     var currentColor = 0 // 0 - off, 1 - white, 2 - red, 3 - yellow, 4 - green
     var isLightOn: Bool { currentColor > 0 } // var isLightOn = false
     
@@ -20,8 +22,9 @@ class ViewController: UIViewController {
     let minimumLuminosity: CGFloat = 0.2
     var currentLuminosity: CGFloat = 1
     var isAdjustmentMode = false
-
-    var lightColor: UIColor {
+    
+    /// The color of screen calculated from currentColor and currentLuminosity properties
+    var screenColor: UIColor {
         switch currentColor {
         case 2:
             return UIColor(red: currentLuminosity, green: 0, blue: 0, alpha: 1)
@@ -34,18 +37,21 @@ class ViewController: UIViewController {
         }
     }
     
+    /// Values representing the on-screen length corresponding to full range of luminocity (0...1)
+    /// Calculated as one half of view height.
     var adjustmentScale: CGFloat {
         self.view.frame.height / 2
     }
-
-    // MARK: - METHODS -
+    
+    // MARK: - Methods -
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
         //print( #line, #function, adjustmentScale)
     }
-
+    
+    /// Update device flashlight according to isLightOn and currentLuminosity properties
     fileprivate func updateTorch() {
         guard
             let device = AVCaptureDevice.default(for: AVMediaType.video),
@@ -66,24 +72,35 @@ class ViewController: UIViewController {
         
     }
     
+    /// Update device screen and flashlight according to isLightOn and currentLuminosity properties
     fileprivate func updateUI() {
-        self.view.backgroundColor = isLightOn ? lightColor : .black
+        self.view.backgroundColor = isLightOn ? screenColor : .black
         updateTorch()
     }
-        
+    
+    /// Process screen taps to switch touches: switch state through the sequence off - white - red - yellow - green - off
+    /// - Parameters:
+    ///   - touches: A set of UITouch instances that represent the touches whose values changed.
+    ///   - event: The event to which the touches belong.
+    /// Detailed description of parameters see in UIResponder documentation.
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        
         // do not toggle the light in adjustment mode -- quit ajustment mode instead
         if isAdjustmentMode {
             isAdjustmentMode = false
         } else {
             currentColor = (currentColor + 1) % 5 // isLightOn.toggle()
         }
-
+        
         updateUI()
         //print(#line,#function, isLightOn, lightLuminosity)
     }
     
+    /// Process screen swipes to increase and decrease luminosity
+    /// - Parameters:
+    ///   - touches: A set of UITouch instances that represent the touches whose values changed.
+    ///   - event: The event to which the touches belong.
+    /// Detailed description of parameters see in UIResponder documentation.
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         let touch = touches.first
@@ -119,7 +136,7 @@ class ViewController: UIViewController {
         }
         
         super.touchesMoved(touches, with: event)
-            
+        
     }
     
 }
